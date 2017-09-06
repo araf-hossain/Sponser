@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Form by Andrew Coyle</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+<style>
+
+@media(min-width: 800px)
+{
+  .form
+  {
+    width: 70%;
+    margin:0 auto;
+  }
+}
+
+.form h1
+{
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  margin: 10px 0 0;
+  color: #717171;
+}
+.ad_form
+{
+  display: block;
+  margin: 30px 30px 2px;
+  overflow: hidden;
+  background: #FFF;
+  border: 1px solid #E4E4E4;
+  border-radius: 5px;
+  font-size: 0;
+}
+
+@media(min-width:800px){
+  .ad_form > div {
+    display: inline-block;
+  }
+  .ad_form > div.col-submit {
+    display: block;
+  }
+}
+
+.ad_form > div > label
+{
+  display: block;
+  padding: 20px 20px 10px;
+  vertical-align: top;
+  font-family: Source Sans Pro, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #939393;
+  cursor: pointer;
+}
+
+.ad_form > div.col-2, .ad_form > div.col-3, .ad_form > div.col-4, .ad_form > div.col-5 { 
+  border-bottom: 1px solid #E4E4E4;
+}
+
+@media(min-width: 800px)
+{
+  .ad_form > div.col-2, .ad_form > div.col-3, .ad_form > div.col-4, .ad_form > div.col-5
+  { 
+    box-shadow: 1px 1px #E4E4E4; border: none; 
+  }  
+}
+
+@media(min-width:800px){
+  .ad_form > div.col-2 { width: 33.3333333333%}
+  .ad_form > div.col-3 { width: 33.3333333333% }
+  .ad_form > div.col-4 { width: 25% }
+  .ad_form > div.col-5 { width: 100% }
+}
+
+.ad_form > div > label > input
+{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 27px;
+  line-height: 27px;
+  margin: 5px -5px 0;
+  padding: 7px 5px 3px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity .3s, box-shadow .3s;
+}
+.ad_form > div > label > textarea
+{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height:130px;
+  line-height: 27px;
+  margin: 5px -5px 0;
+  padding: 10px 8px 6px;
+  border: 1px solid #ddd;
+  outline: none;
+  border-radius: 3px;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 200;
+  transition: opacity .3s, box-shadow .3s;
+}
+.form > div.col-submit {
+  text-align: center;
+  padding: 20px;
+}
+
+.form > div.col-submit button {
+  border: 1px solid #a94040;
+  background: #ffffff ;
+  font-size: 14px;
+  color: #717171;
+  padding: .6em;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.form > div.col-submit button:hover, .form > div.col-submit button:focus {
+  background: #a94040;
+  color:#ffffff;
+  cursor:pointer;
+}
+@media(min-width: 500px){
+  .form > div.col-submit button {
+    width: 30%;
+    font-size: 20px;
+    margin: 0 auto;
+  }
+}
+
+@media(min-width: 800px)
+{
+  .form div.col-district
+  {
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+  }
+}
+
+.ad_form > div > label > select
+{
+  display: block;
+  width: 100%;
+  margin: 16px 0 8px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 200;
+  opacity: .80;
+}
+
+.ad_form > div > label > input:focus, .ad_form > div > label > select:focus,.ad_form > div > label > textarea:focus
+{
+  opacity: 1;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, .15);
+}
+    </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+
+<form class="form">
+<h1>Describe What You Want to Sell</h1>
+<div class="ad_form">  
+  <div class="col-2">
+    <label>
+      Name
+      <input placeholder="What is your provider's company name?" tabindex="1" />
+    </label>
+  </div>
+  <div class="col-2">
+    <label>
+      Email
+      <input placeholder="Who represents the provider's company?" tabindex="2" />
+    </label>
+  </div>
+  <div class="col-2" >
+    <label>
+      Item Name
+      <select tabindex="3">
+        <option>Select shipment method</option>
+        <option>Standard 3 - 5 Business Days</option>
+        <option>Expedited Next-Day Delivery</option>
+        <option>Expedited Next-Day Delivery</option>
+        <option>Expedited Next-Day Delivery</option>
+        <option>Expedited Next-Day Delivery</option>
+        <option>Expedited Next-Day Delivery</option>
+      </select>
+    </label>
+  </div>
+  <div class="col-3">
+    <label>
+      Category Name
+      <select tabindex="4">
+        <option>Select shipment method</option>
+        <option>Standard 3 - 5 Business Days</option>
+        <option>Expedited Next-Day Delivery</option>
+        <option>Expedited Next-Day Delivery</option>
+        <option>Expedited Next-Day Delivery</option>
+        <option>Expedited Next-Day Delivery</option>
+        <option>Expedited Next-Day Delivery</option>
+      </select>
+    </label>
+  </div>
+  <div class="col-2">
+    <label>
+      Sub Category Name
+      <select tabindex="5">
+        <option>Select shipment method</option>
+        <option>Standard 3 - 5 Business Days</option>
+        <option>Expedited Next-Day Delivery</option>
+        <option>Expedited Next-Day Delivery</option>
+        <option>Expedited Next-Day Delivery</option>
+        <option>Expedited Next-Day Delivery</option>
+        <option>Expedited Next-Day Delivery</option>
+      </select>
+    </label>
+  </div>
+  <div class="col-3">
+    <label>
+      Product Title
+      <input placeholder="Enter Produt Title" tabindex="6" />
+    </label>
+  </div>
+
+  <div class="col-3" >
+    <label>
+      Item Name
+      <input type="file" name="images[]" tabindex="7">
+      <input type="file" name="images[]" tabindex="8">
+      <input type="file" name="images[]" tabindex="9">
+    </label>
+  </div>
+  <div class="col-3">
+    <label>
+      Product Price
+      <input placeholder="What is the provider's phone number?" tabindex="10" />
+    </label>
+  </div>
+  <div class="col-3">
+    <label>
+      Phone Number
+      <input placeholder="What is the provider's email?" tabindex="11" />
+    </label>
+  </div>
+  <div class="col-5">
+    <label>
+      Product Summary
+      <textarea name="pdt_details" tabindex="12"></textarea>
+    </label>
+  </div>
+  <div class="col-district">
+    <label>
+      Select District
+      <select tabindex="13">
+        <option>Select shipment method</option>
+        <option>Standard 3 - 5 Business Days</option>
+        <option>Expedited Next-Day Delivery</option>
+      </select>
+    </label>
+  </div>
+  
+</div>
+<div class="col-submit">
+    <button type="submit" tabindex="14">Submit</button>
+  </div>
+</form>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+</body>
+</html>

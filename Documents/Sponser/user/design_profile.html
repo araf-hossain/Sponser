@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Obaju e-commerce template">
+    <meta name="author" content="Ondrej Svestka | ondrejsvestka.cz">
+    <meta name="keywords" content="">
+
+    <title>
+        Design of Profile Picture
+    </title>
+
+    <meta name="keywords" content="">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
+
+    <!-- styles -->
+    <link href="css/css/font-awesome.css" rel="stylesheet">
+    <link href="css/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/css/animate.min.css" rel="stylesheet">
+    <link href="css/css/owl.carousel.css" rel="stylesheet">
+    <link href="css/css/owl.theme.css" rel="stylesheet">
+
+    <!-- theme stylesheet -->
+    <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+    <!-- your stylesheet with modifications -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <script src="css/js/respond.min.js"></script>
+
+    <link rel="shortcut icon" href="favicon.png">
+
+
+
+</head>
+
+<body>
+
+    <div id="all">
+        <div id="content">
+                <div class="box">
+                    <div class="container" >
+                        <div class="col-md-3">
+                            <img src="img/mac.jpg" style="width: 220px;height: 220px;border:1px solid #a94040;border-radius: 100%;">
+                            <div style="height:0;overflow:hidden;">
+                                <input type="file" id="fileInput" name="fileInput" />
+                            </div>
+                            <button type="button" style="width:60%;margin: 10px 30px 0;padding: 5px;outline: none;" onclick="chooseFile();">Upload Profile Picture</button>
+
+                            <script>
+                                function chooseFile() {
+                                $("#fileInput").click();
+                                }
+                            </script>
+                        </div>
+                        <div class="col-md-8">
+                            <h2 style="margin: 0;">Araf Hossain</h2>
+                        </div>
+                        <div class="col-md-5">
+                            <p class="lead">
+                                araf@gmail.com <br>
+                                01798665933 <br>
+                                Company Name-Zip Code <br>
+                                Street Address <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            <div class="container" >
+                <div class="col-md-12" >
+                    <div class="box" style="box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3)">
+                        <h1>My account</h1>
+                        <p class="lead">Change your personal details or your password here.</p>
+                        <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+                        <h3>Change password</h3>
+
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="password_old">Old password</label>
+                                        <input type="password" class="form-control" id="password_old">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="password_1">New password</label>
+                                        <input type="password" class="form-control" id="password_1">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="password_2">Retype new password</label>
+                                        <input type="password" class="form-control" id="password_2">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.row -->
+
+                            <div class="col-sm-12 text-center">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save new password</button>
+                            </div>
+                        </form>
+
+                        <hr>
+
+                        <h3>Personal details</h3>
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="firstname">Firstname</label>
+                                        <input type="text" class="form-control" id="firstname">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="lastname">Lastname</label>
+                                        <input type="text" class="form-control" id="lastname">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.row -->
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="company">Company</label>
+                                        <input type="text" class="form-control" id="company">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="street">Street</label>
+                                        <input type="text" class="form-control" id="street">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.row -->
+
+                            <div class="row">
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="form-group">
+                                        <label for="state">State</label>
+                                        <select class="form-control" id="state"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="form-group">
+                                        <label for="country">Country</label>
+                                        <select class="form-control" id="country"></select>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="phone">Telephone</label>
+                                        <input type="text" class="form-control" id="phone">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 text-center">
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save changes</button>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.container -->
+        </div>
+        </div>
+        <!-- /#content -->
+
+    </div>
+    <!-- /#all -->
+
+
+    
+
+    <!-- *** SCRIPTS TO INCLUDE ***
+ _________________________________________________________ -->
+    <script src="css/js/jquery-1.11.0.min.js"></script>
+    <script src="css/js/bootstrap.min.js"></script>
+    <script src="css/js/jquery.cookie.js"></script>
+    <script src="css/js/waypoints.min.js"></script>
+    <script src="css/js/modernizr.js"></script>
+    <script src="css/js/bootstrap-hover-dropdown.js"></script>
+    <script src="css/js/owl.carousel.min.js"></script>
+    <script src="css/js/front.js"></script>
+
+
+
+</body>
+
+</html>

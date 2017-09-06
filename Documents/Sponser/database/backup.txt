@@ -1,0 +1,595 @@
+/*
+SQLyog Enterprise - MySQL GUI v7.02 
+MySQL - 5.0.45-community-nt : Database - sponser
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`sponser` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `sponser`;
+
+/*Table structure for table `ad_form` */
+
+DROP TABLE IF EXISTS `ad_form`;
+
+CREATE TABLE `ad_form` (
+  `name` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  `email` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `itm_name` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `cate_name` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `sub_cate` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `pdt_id` varchar(40) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `pdt_name` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `pdt_price` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `pdt_size` varchar(70) character set utf8 collate utf8_unicode_ci default 'This Product Size is not Available.',
+  `pdt_stock` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  `pdt_details` mediumtext character set utf8 collate utf8_unicode_ci,
+  `phn_number` varchar(14) character set utf8 collate utf8_unicode_ci default NULL,
+  `dist` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `views` varchar(40) character set utf8 collate utf8_unicode_ci default '0',
+  `date` varchar(20) character set utf8 collate utf8_unicode_ci default NULL,
+  `time` varchar(20) character set utf8 collate utf8_unicode_ci default NULL,
+  PRIMARY KEY  (`pdt_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `ad_form` */
+
+insert  into `ad_form`(`name`,`email`,`itm_name`,`cate_name`,`sub_cate`,`pdt_id`,`pdt_name`,`pdt_price`,`pdt_size`,`pdt_stock`,`pdt_details`,`phn_number`,`dist`,`views`,`date`,`time`) values ('Araf Hossain','araf@gmail.com','Mens','Clothing','Pants','PDT--0000001','Fit Jean','3200','Only Large Available','120','Levi\'s provides denim jeans that are comfortable and stylish with the perfect fit that has stood the test of time. These 505 jeans feature five pockets, zip fly closure, straight fit and sit low on the waistline.and stylish with the perfect fit that has stood the test of time.Inspired by the slim straight 514™ jean, this down-sized version has a close fit through seat and thigh as well as a hidden adjustable waist. Currently, item can be shipped only within the U.S. and to APO/FPO addresses. For APO/FPO shipments, please check with the manufacturer regarding warranty and support issues. 100% Cotton. Zipper closure. Traditional fit with hidden adjustable waist. Rivet detailing at pockets.','01798665933','Dhaka','42','14-02-2017','02:02:01 PM');
+insert  into `ad_form`(`name`,`email`,`itm_name`,`cate_name`,`sub_cate`,`pdt_id`,`pdt_name`,`pdt_price`,`pdt_size`,`pdt_stock`,`pdt_details`,`phn_number`,`dist`,`views`,`date`,`time`) values ('Araf Hossain','araf@gmail.com','Mens','Clothing','Pants','PDT--0000002','Fite Jeans','2200','Small & Medium','2122','This Levi\'s® 511™ jean is designed for peak performance, and offers a comfortable, regular fit from the hip to the ankle. It also features our signature five pocket design with arcuate stitch on the rear spade pockets for a classic look he\'ll love. Made from soft, stretchy denim and 23% recycled plastic bottles, it increases his mobility and is eco-friendly. Moisture wicking fabric keeps him dry and comfortable, while the soil release feature easily gets rid of stains when washed.This Levi\'s® 511™ jean is designed for peak performance, and offers a comfortable, regular fit from the hip to the ankle. It also features our signature five pocket design with arcuate stitch on the rear spade pockets for a classic look he\'ll love. Made from soft, stretchy denim and 23% recycled plastic bottles, it increases his mobility and is eco-friendly. Moisture wicking fabric keeps him dry and comfortable, while the soil release feature easily gets rid of stains when washed. Moisture wicking fabric keeps him dry and comfortable, while the soil release.','01798665933','Dhaka','78','14-02-2017','02:02:56 PM');
+insert  into `ad_form`(`name`,`email`,`itm_name`,`cate_name`,`sub_cate`,`pdt_id`,`pdt_name`,`pdt_price`,`pdt_size`,`pdt_stock`,`pdt_details`,`phn_number`,`dist`,`views`,`date`,`time`) values ('Araf Hossain','araf@gmail.com','Mens','Clothing','Shirts','PDT--0000003','Mens Stylish Shirt','2500','Medium & Large','1200','Material:100% Cotton Boy\'s long sleeve T-shirt Style:Casual T-shirt Crewneck Cartoon Pattern T-shirt All Trademark Belongs To Fiream.Classic and warm, this vintage logo is a great layer for brisk mornings at the pier. Long sleeve hooded screen tee; great fall fashion with great details. Zip-front design. Ribbed cuffs and hem. Appliquéd OshKosh logo.Classic and warm, this vintage logo is a great layer for brisk mornings at the pier. Long sleeve hooded screen tee; great fall fashion with great details. Zip-front design. Ribbed cuffs and hem. Appliquéd OshKosh logo.','01798665933','Dhaka','31','14-02-2017','02:02:47 PM');
+insert  into `ad_form`(`name`,`email`,`itm_name`,`cate_name`,`sub_cate`,`pdt_id`,`pdt_name`,`pdt_price`,`pdt_size`,`pdt_stock`,`pdt_details`,`phn_number`,`dist`,`views`,`date`,`time`) values ('Araf Hossain','araf@gmail.com','Books & Audible','Fiction & Literature','Drama','PDT--0000004','His Bloody Project','2100','This Product Size is not Available.','210','	A wonderful new novel from one of America\'s bestselling authors. Exploring the tensions between a local culture and a changing national political agenda; family arguments and love: an instant classic., An historic literary event: the publication of a newly discovered novel, the earliest known work from Harper Lee, the beloved, bestselling author of the Pulitzer Prize-winning classic, To Kill a Mockingbird. Originally written in the mid-1950s, Go Set a Watchman was the novel Harper Lee first submitted to her publishers before To Kill a Mockingbird. Assumed to have been lost, the manuscript was discovered in late 2014. Go Set a Watchman features many of the characters from To Kill a Mockingbird some twenty years later. Returning home to Maycomb to visit her father, Jean Louise Finch--Scout--struggles with issues both personal and political, involving Atticus, society, and the small Alabama town that shaped her.The Eighth Story. Nineteen Years Later. Based on an original new story by J.K. Rowling, Jack Thorne and John Tiffany, a new play by Jack Thorne.','01798665933','Dhaka','15','14-02-2017','02:02:41 PM');
+insert  into `ad_form`(`name`,`email`,`itm_name`,`cate_name`,`sub_cate`,`pdt_id`,`pdt_name`,`pdt_price`,`pdt_size`,`pdt_stock`,`pdt_details`,`phn_number`,`dist`,`views`,`date`,`time`) values ('Araf Hossain','araf@gmail.com','Kids','Boys Shoes','Casual','PDT--0000005','The Cursed Child','1220','Only Large Available','210','The Eighth Story. Nineteen Years Later. Based on an original new story by J.K. Rowling, Jack Thorne and John Tiffany, a new play by Jack Thorne. Based on an original new story by J.K. Rowling, Jack Thorne and John Tiffany, a new play by Jack Thorne, Harry Potter and the Cursed Child is the eighth story in the Harry Potter series and the first official Harry Potter story to be presented on stageA biting satire about a young man\'s isolated upbringing and the race trial that sends him to the Supreme Court, Paul Beatty\'s The Sellout showcases a comic genius at the top of his game. It challenges the sacred tenets of the United States Constitution, urban life, the civil rights movement, the father-son relationship, and the holy grail of racial equalityâ€•the black Chinese restaurant. Born in the \"agrarian ghetto\" of Dickensâ€•on the southern outskirts of Los Angelesâ€•the narrator of The Sellout resigns himself to the fate of lower-middle-class Californians: \"I\'d die in the same bedroom I\'d grown up in, looking up at the cracks in the stucco ceiling that\'ve been there since \'68 quake.\" Raised by a single father, a controversial sociologist, he spent his childhood as the subject in racially charged psychological studies.','01798665933','Dhaka','38','14-02-2017','02:02:12 PM');
+insert  into `ad_form`(`name`,`email`,`itm_name`,`cate_name`,`sub_cate`,`pdt_id`,`pdt_name`,`pdt_price`,`pdt_size`,`pdt_stock`,`pdt_details`,`phn_number`,`dist`,`views`,`date`,`time`) values ('Araf Hossain','araf@gmail.com','Kids','Shoes','Hiking Shoes','PDT--0000006','Marathon Running Shoes','1200','Only Medium Available','2100','The nivia running shoe comes in all sizes with an attractive design , the outer material is of mesh & pu with polka & solid printing. The shoe is available with solid printing. Available with a rubber sole. The pair looks graceful while wearing. Outer material mesh PU. Lifestyle sports. Care instructions rotate your pair of shoes once every other day, allowing them to de-odorize and retain their shapes, use shoe bags to prevent any stains or mildew, dust any dry dirt from the surface using a clean cloth, do not use polish or shiner. Model name marathon, sole material rubber. Heel pattern polka print solid, upper pattern solid, heel height (inches) 25.The nivia running shoe comes in all sizes with an attractive design , the outer material is of mesh & pu with polka & solid printing. The shoe is available with solid printing. Available with a rubber sole. The pair looks graceful while wearing. Outer material mesh PU. Lifestyle sports. Care instructions rotate your pair of shoes once every other day, allowing them to de-odorize and retain their shapes, use shoe bags to prevent any stains or mildew, dust any dry dirt from the surface using a clean cloth, do not use polish or shiner. Model name marathon, sole material rubber. Heel pattern polka print solid, upper pattern solid, heel height (inches) 25.A perfect pick to beat your own timing on the running/walking track is this pair of running shoes from \"Sports\" Made with synthetic leather upper and PU light weight sole.','01798665933','Dhaka','50','14-02-2017','03:02:34 PM');
+insert  into `ad_form`(`name`,`email`,`itm_name`,`cate_name`,`sub_cate`,`pdt_id`,`pdt_name`,`pdt_price`,`pdt_size`,`pdt_stock`,`pdt_details`,`phn_number`,`dist`,`views`,`date`,`time`) values ('Araf Hossain','araf@gmail.com','Kids','Shoes','Sports Shoes','PDT--0000007','Freedom Sport Shoes','1450','Only Medium Available','2102','	Freedom daisy IS ONE OF THE MOST INNOVATIVE FOOTWEAR BRAND . IT IS FAMOUS FOR ITS QUALITY, WORTH ABLE, STYLE, COMFORT AND MANY MORE REASONS. Freedom daisy PROMISE ITS USER A BETTER QUALITY SHOE AT A VERY COMPETED PRICES. EVERY TIME YOU BUY Freedom daisy YOU WILL BE GLADES. REMEMBER ITS NOT A SHOE ITS THE Freedom daisy OF YOUR FEET.Outer Material : Synthetic + Mesh, Inner Material : PU + Cotton + Mesh. Toe Style : Soft Toe.\r\n	Freedom daisy IS ONE OF THE MOST INNOVATIVE FOOTWEAR BRAND . IT IS FAMOUS FOR ITS QUALITY, WORTH ABLE, STYLE, COMFORT AND MANY MORE REASONS. Freedom daisy PROMISE ITS USER A BETTER QUALITY SHOE AT A VERY COMPETED PRICES. EVERY TIME YOU BUY Freedom daisy YOU WILL BE GLADES. REMEMBER ITS NOT A SHOE ITS THE Freedom daisy OF YOUR FEET.Outer Material : Synthetic + Mesh, Inner Material : PU + Cotton + Mesh. Toe Style : Soft Toe.	Freedom daisy IS ONE OF THE MOST INNOVATIVE FOOTWEAR BRAND . IT IS FAMOUS FOR ITS QUALITY, WORTH ABLE, STYLE, COMFORT AND MANY MORE REASONS. Freedom daisy PROMISE ITS USER A BETTER QUALITY SHOE AT A VERY COMPETED PRICES. EVERY TIME YOU BUY Freedom daisy YOU WILL BE GLADES. REMEMBER ITS NOT A SHOE ITS THE Freedom daisy OF YOUR FEET.Outer Material : Synthetic + Mesh, Inner Material : PU + Cotton + Mesh. Toe Style : Soft Toe.\r\n','01798665933','Feni','14','14-02-2017','03:02:43 PM');
+insert  into `ad_form`(`name`,`email`,`itm_name`,`cate_name`,`sub_cate`,`pdt_id`,`pdt_name`,`pdt_price`,`pdt_size`,`pdt_stock`,`pdt_details`,`phn_number`,`dist`,`views`,`date`,`time`) values ('Araf Hossain','araf@gmail.com','Kids','Boys Shoes','Trainers','PDT--0000008','Reebok Leather Gum','2150','Only Large Available','1200','Friends will be stuck on how adorable your babe is in the Reebok® Kids Classic Leather Gum shoe! Durable all-leather uppers. Traditional lace-up closure. Padded collar and tongue provides a snug, comfy fit. Textile lining and a lightly cushioned footbed gently caresses your baby\'s feet. Perforated toe box for slight breathability into shoe. EVA midsole. Grippy rubber gum outsole so your child with stick strong to every tiny baby step they take. Imported. Measurements: Weight: 4 oz Product measurements were taken using size 3 Infant, width M. Please note that measurements may vary by size.Friends will be stuck on how adorable your babe is in the Reebok® Kids Classic Leather Gum shoe! Durable all-leather uppers. Traditional lace-up closure. Padded collar and tongue provides a snug, comfy fit. Textile lining and a lightly cushioned footbed gently caresses your baby\'s feet. Perforated toe box for slight breathability into shoe. EVA midsole. Grippy rubber gum outsole so your child with stick strong to every tiny baby step they take. Imported. Measurements: Weight: 4 oz Product measurements were taken using size 3 Infant, width M. Please note that measurements may vary by size.Perforated toe box for slight breathability into shoe.','01798665933','Comilla','49','14-02-2017','03:02:02 PM');
+insert  into `ad_form`(`name`,`email`,`itm_name`,`cate_name`,`sub_cate`,`pdt_id`,`pdt_name`,`pdt_price`,`pdt_size`,`pdt_stock`,`pdt_details`,`phn_number`,`dist`,`views`,`date`,`time`) values ('Araf Hossain','araf@gmail.com','Home & Living','Bed Linen & Furnishing','Bedsheets','PDT--0000009','Jared Futon','1500','Only Small Available','1200','Style meets functionality in the Varick Gallery Jared Futon Frame and Mattress. This modular futon and mattress can be converted from a sofa to a bed in less than a minute, thanks to the incorporated Click-Clack sofa technology. Featuring a wooden frame, this futon is strong and sturdy. The mattress section is upholstered in microfiber that makes the futon comfortable for sitting or sleeping for long hours. As this futon and mattress is available, it mingles well with almost all color schemes. This Jared Futon Frame and Mattress by Varick Gallery requires assembly upon arrival. Add a personal touch to your home with the Jared Futon. Perfectly sized for small spaces, the simple yet unique design, lends a relaxed and sophisticated look. The lush, microfiber upholstery, extra-padded seats and modern tufting, make it ideal for any room décor. Stunning, smooth Club Green Satin Ribbon could be the eye-catching flourish perfect for your special occasion! Whether you\'re looking to decorate your wedding cake, create dazzling table displays or embellish invitations, this high quality ribbon is sure to impress however you choose to use it! The ribbon feels silky to touch and is available in a variety of gorgeous, bold colors.','01798665933','Dhaka','13','14-02-2017','03:02:16 PM');
+insert  into `ad_form`(`name`,`email`,`itm_name`,`cate_name`,`sub_cate`,`pdt_id`,`pdt_name`,`pdt_price`,`pdt_size`,`pdt_stock`,`pdt_details`,`phn_number`,`dist`,`views`,`date`,`time`) values ('Araf Hossain','araf@gmail.com','Electronics & Computers','Computer & Technology','Laptops','PDT--0000010','Apple MacBook Air','65500','This Product Size is not Available.','210','Corner to corner and pixel by pixel, the MacBook Air display is both an engineering feat and a design breakthrough. The display measures a mere 4.86 millimeters (0.19 inch) thin, yet its resolution makes you feel like youâ€™re looking at a larger screen. The 11-inch MacBook Air features a resolution of 1366 by 768 pixels, while the 13-inch model wows with a resolution of 1440 by 900 pixels. And LED backlighting makes colors bright and vibrant from edge to edge. So whether youâ€™re editing photos.','01798665933','Dhaka','82','14-02-2017','04:02:10 PM');
+insert  into `ad_form`(`name`,`email`,`itm_name`,`cate_name`,`sub_cate`,`pdt_id`,`pdt_name`,`pdt_price`,`pdt_size`,`pdt_stock`,`pdt_details`,`phn_number`,`dist`,`views`,`date`,`time`) values ('Araf Hossain','araf@gmail.com','Electronics & Computers','Computers & Accessories','Laptops','PDT--0000011','HP Pavilion 13-U10','59500','This Product Size is not Available.','13','Product number Y4F71PA Product name HP Pavilion x360 - 13-u104tu Microprocessor IntelÂ® CoreTM i3-7100U (2.4 GHz, 3 MB cache, 2 cores) Memory, standard 4 GB DDR4-2133 SDRAM (1 x 4 GB) Video graphics IntelÂ® HD Graphics 620 Hard drive 1 TB 5400 rpm SATA Display 13.3\" diagonal FHD IPS UWVA WLED-backlit multitouch-enabled edge-to-edge glass (1920 x 1080) Keyboard Full-size island-style backlit keyboard with numeric keypad Pointing device HP Imagepad with multi-touch gesture support Wireless connectivity IntelÂ® 802.11ac (1x1) Wi-FiÂ® and BluetoothÂ® 4.2 Combo Expansion slots 1 multi-format SD media card reader External ports 1 HDMI; 1 headphone/microphone combo; 1 USB 2.0; 2 USB 3.1 Minimum dimensions (W x D x H) 32.64 x 22.2 x 1.98 cm Weight Starting at 1.58 kg Power supply type 65 W EM AC power adapter Battery type 3-cell, 41 Wh Li-ion Webcam HP Wide Vision HD Camera with dual array digital microphone Audio features B&O PLAY; HP Audio Boost; Dual speakers.','01798665933','Dhaka','44','14-02-2017','04:02:50 PM');
+insert  into `ad_form`(`name`,`email`,`itm_name`,`cate_name`,`sub_cate`,`pdt_id`,`pdt_name`,`pdt_price`,`pdt_size`,`pdt_stock`,`pdt_details`,`phn_number`,`dist`,`views`,`date`,`time`) values ('Araf Hossain','araf@gmail.com','Movies & Games','Genre','Action & Adventure','PDT--0000012','A Thief\'s End','1300','This Product Size is not Available.','32','Several years after his last adventure, retired fortune hunter, Nathan Drake, is forced back into the world of thieves. With the stakes much more personal, Drake embarks on a globe-trotting journey in pursuit of a historical conspiracy behind a fabled pirate treasure. His greatest adventure will test his physical limits, his resolve, and ultimately what heâ€™s willing to sacrifice to save the ones he loves.Several years after his last adventure, retired fortune hunter, Nathan Drake, is forced back into the world of thieves. With the stakes much more personal, Drake embarks on a globe-trotting journey in pursuit of a historical conspiracy behind a fabled pirate treasure. His greatest adventure will test his physical limits, his resolve, and ultimately what heâ€™s willing to sacrifice to save the ones he loves.With the stakes much more personal, Drake embarks on a globe-trotting journey in pursuit of a historical conspiracy behind a fabled pirate treasure. His greatest adventure will test his physical limits.','01798665933','Dhaka','54','14-02-2017','04:02:16 PM');
+insert  into `ad_form`(`name`,`email`,`itm_name`,`cate_name`,`sub_cate`,`pdt_id`,`pdt_name`,`pdt_price`,`pdt_size`,`pdt_stock`,`pdt_details`,`phn_number`,`dist`,`views`,`date`,`time`) values ('Araf Hossain','araf@gmail.com','Movies & Games','Genre','Action & Adventure','PDT--0000013','Call Of Duty','3410','This Product Size is not Available.','10','Call of Duty®: Advanced Warfare envisions the powerful battlegrounds of the future, where both technology and tactic have evolved to usher in a new era of combat for the franchise. Delivering a stunning performance, academy award® winning actor Kevin Spacey stars as Jonathan Irons – one of the most powerful men in the world – shaping this chilling vision of the future of war. An Advanced World: Call of Duty: Advanced Warfare takes place in a plausible future in which technological progress and today’s military practices have converged with powerful consequences. In this carefully researched and crafted vision, Private Military Corporations (PMCs) have become the dominant armed forces for countless nations outsourcing their military needs, redrawing borders and rewriting the rules of war. And Jonathan Irons, the founder and president of the world’s largest PMC - Atlas Corporation - is at the center of it all.Call of Duty®: Advanced Warfare envisions the powerful battlegrounds of the future, where both technology and tactic have evolved to usher in a new era of combat for the franchise. Delivering a stunning performance, academy award® winning actor Kevin Spacey stars as Jonathan Irons – one of the most powerful men in the world – shaping this chilling vision of the future of war. An Advanced World: Call of Duty: Advanced Warfare takes place in a plausible future in which technological progress and today’s military practices have converged with powerful consequences. In this carefully researched and crafted vision, Private Military Corporations (PMCs) have become the dominant armed forces for countless nations outsourcing their military needs, redrawing borders and rewriting the rules of war. And Jonathan Irons, the founder and president of the world’s largest PMC - Atlas Corporation - is at the center of it all.','01798665933','Dhaka','21','14-02-2017','05:02:49 PM');
+insert  into `ad_form`(`name`,`email`,`itm_name`,`cate_name`,`sub_cate`,`pdt_id`,`pdt_name`,`pdt_price`,`pdt_size`,`pdt_stock`,`pdt_details`,`phn_number`,`dist`,`views`,`date`,`time`) values ('Araf Hossain','araf@gmail.com','Ladies','Clothing','Shirts','PDT--0000014','Floral Boho Dress','1950','Only Medium Available','500','With pretty ruffles and a summer-ready print, this tropical dress is just what she needs for vacay and play days. From picnics to barbecues, she\'ll twirl through summer in this paperbag drop-waist dress. Crafted with embroidered eyelet lace and a tacked bow for a super sweet style.With pretty prints and a border along the hem, this soft, lightweight dress will be her new want-to-wear-everyday favorite!With pretty ruffles and a summer-ready print, this tropical dress is just what she needs for vacay and play days. From picnics to barbecues, she\'ll twirl through summer in this paperbag drop-waist dress. Crafted with embroidered eyelet lace and a tacked bow for a super sweet style.With pretty prints and a border along the hem, this soft, lightweight dress will be her new want-to-wear-everyday favorite!With pretty ruffles and a summer-ready print, this tropical dress is just what she needs for vacay and play days. From picnics to barbecues, she\'ll twirl through summer in this paperbag drop-waist dress. Crafted with embroidered eyelet lace and a tacked bow for a super sweet style.With pretty prints and a border along the hem, this soft, lightweight dress will be her new want-to-wear-everyday favorite!','01798665933','Dhaka','27','14-02-2017','05:02:07 PM');
+
+/*Table structure for table `cate_info` */
+
+DROP TABLE IF EXISTS `cate_info`;
+
+CREATE TABLE `cate_info` (
+  `item_name` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `cate_id` varchar(40) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `cate_name` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  PRIMARY KEY  (`cate_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `cate_info` */
+
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Mens','Cate--01','Clothing');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Mens','Cate--02','Shoes');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Mens','Cate--03','Accessories');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Mens','Cate--04','Featured');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Mens','Cate--05','Looks And Trends');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Home & Living','Cate--06','Bed Linen & Furnishing');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Home & Living','Cate--07','Bath');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Home & Living','Cate--08','Home Decor');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Home & Living','Cate--09','Kitchen & Table');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Home & Living','Cate--10','Lamps & Light Fixtures');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Kids','Cate--11','Boys Clothing');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Kids','Cate--12','Boys Shoes');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Kids','Cate--13','Girls Clothing');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Kids','Cate--14','Girls Footwear');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Kids','Cate--15','Looks & Trends');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Books & Audible','Cate--16','Fiction & Literature');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Books & Audible','Cate--17','Arts & Entertainment');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Books & Audible','Cate--18','Computer & Technology');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Books & Audible','Cate--19','Science');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Books & Audible','Cate--20','Mystery, Thriller & Suspense');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Books & Audible','Cate--21','Medical Books & Textbooks');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Movies & Games','Cate--22','Genre');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Movies & Games','Cate--23','Actor');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Movies & Games','Cate--24','Director');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Electronics & Computers','Cate--25','Camera, Photo & Video');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Electronics & Computers','Cate--26','Computers & Accessories');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Electronics & Computers','Cate--27','Software');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Ladies','Cate--28','Clothing');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Ladies','Cate--29','Shoes');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Ladies','Cate--30','Accessories');
+insert  into `cate_info`(`item_name`,`cate_id`,`cate_name`) values ('Ladies','Cate--31','Looks & Trends');
+
+/*Table structure for table `checking` */
+
+DROP TABLE IF EXISTS `checking`;
+
+CREATE TABLE `checking` (
+  `session_id` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `email` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `pdt_id` varchar(40) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `pdt_name` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `itm_name` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `cate_name` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `sub_cate` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `pdt_price` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  `quantity` varchar(40) character set utf8 collate utf8_unicode_ci default '1',
+  `date` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  `time` varchar(20) character set utf8 collate utf8_unicode_ci default NULL,
+  PRIMARY KEY  (`pdt_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `checking` */
+
+insert  into `checking`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`date`,`time`) values ('de2ec785c7ff0a95beb5fe13c80ef153','wasifmiraz@gmail.com','PDT--0000001','Fit Jean','Mens','Clothing','Pants','3200','1','27-02-2017','09:02:54 PM');
+insert  into `checking`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`date`,`time`) values ('1171bd055a9c27b46a445c0b20fcfafc','wasifmiraz@gmail.com','PDT--0000002','Fite Jeans','Mens','Clothing','Pants','2200','1','28-02-2017','09:02:55 PM');
+insert  into `checking`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`date`,`time`) values ('de2ec785c7ff0a95beb5fe13c80ef153','wasifmiraz@gmail.com','PDT--0000003','Mens Stylish Shirt','Mens','Clothing','Shirts','2500','1','27-02-2017','09:02:21 PM');
+insert  into `checking`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`date`,`time`) values ('1171bd055a9c27b46a445c0b20fcfafc','wasifmiraz@gmail.com','PDT--0000004','His Bloody Project','Books & Audible','Fiction & Literature','Drama','2100','1','28-02-2017','09:02:19 PM');
+insert  into `checking`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`date`,`time`) values ('84d364838a5ee8a2f11fb6a93cb9d2cb','araf@gmail.com','PDT--0000005','The Cursed Child','Kids','Boys Shoes','Casual','1220','1','27-02-2017','11:02:39 AM');
+insert  into `checking`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`date`,`time`) values ('84d364838a5ee8a2f11fb6a93cb9d2cb','araf@gmail.com','PDT--0000006','Marathon Running Shoes','Kids','Shoes','Hiking Shoes','1200','1','26-02-2017','11:02:27 AM');
+insert  into `checking`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`date`,`time`) values ('84d364838a5ee8a2f11fb6a93cb9d2cb','araf@gmail.com','PDT--0000008','Reebok Leather Gum','Kids','Boys Shoes','Trainers','2150','1','26-02-2017','11:02:08 AM');
+insert  into `checking`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`date`,`time`) values ('1171bd055a9c27b46a445c0b20fcfafc','wasifmiraz@gmail.com','PDT--0000009','Jared Futon','Home & Living','Bed Linen & Furnishing','Bedsheets','1500','1','28-02-2017','09:02:06 PM');
+insert  into `checking`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`date`,`time`) values ('84d364838a5ee8a2f11fb6a93cb9d2cb','araf@gmail.com','PDT--0000010','Apple MacBook Air','Electronics & Computers','Computer & Technology','Laptops','65500','1','26-02-2017','11:02:47 AM');
+insert  into `checking`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`date`,`time`) values ('84d364838a5ee8a2f11fb6a93cb9d2cb','araf@gmail.com','PDT--0000013','Call Of Duty','Movies & Games','Genre','Action & Adventure','3410','1','26-02-2017','11:02:59 AM');
+insert  into `checking`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`date`,`time`) values ('84d364838a5ee8a2f11fb6a93cb9d2cb','araf@gmail.com','PDT--0000014','Floral Boho Dress','Ladies','Clothing','Shirts','1950','1','26-02-2017','12:02:35 PM');
+
+/*Table structure for table `delivery_details` */
+
+DROP TABLE IF EXISTS `delivery_details`;
+
+CREATE TABLE `delivery_details` (
+  `session_id` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `name` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `email` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `street` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `phn_num` varchar(15) character set utf8 collate utf8_unicode_ci default NULL,
+  `state` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `zip` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `company` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `all_total` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `date` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `time` varchar(50) character set utf8 collate utf8_unicode_ci default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `delivery_details` */
+
+insert  into `delivery_details`(`session_id`,`name`,`email`,`street`,`phn_num`,`state`,`zip`,`company`,`all_total`,`date`,`time`) values (NULL,NULL,'julekha@gmail.com',NULL,NULL,NULL,NULL,NULL,'20000',NULL,NULL);
+insert  into `delivery_details`(`session_id`,`name`,`email`,`street`,`phn_num`,`state`,`zip`,`company`,`all_total`,`date`,`time`) values (NULL,NULL,'sup@gmail.com',NULL,NULL,NULL,NULL,NULL,'15222',NULL,NULL);
+insert  into `delivery_details`(`session_id`,`name`,`email`,`street`,`phn_num`,`state`,`zip`,`company`,`all_total`,`date`,`time`) values (NULL,NULL,'tut@gmail.com',NULL,NULL,NULL,NULL,NULL,'4100',NULL,NULL);
+insert  into `delivery_details`(`session_id`,`name`,`email`,`street`,`phn_num`,`state`,`zip`,`company`,`all_total`,`date`,`time`) values ('84d364838a5ee8a2f11fb6a93cb9d2cb','Araf Hossain','araf@gmail.com','DEPZ Residential Area,Asulia, Savar, Dhaka','01751413650','Dhaka','1352','No Company','78141.5','27-02-2017','05:02:59 PM');
+insert  into `delivery_details`(`session_id`,`name`,`email`,`street`,`phn_num`,`state`,`zip`,`company`,`all_total`,`date`,`time`) values ('84d364838a5ee8a2f11fb6a93cb9d2cb1','Araf Hossain','araf@gmail.com','DEPZ Residential Area,Asulia, Savar, Dhaka','01751413650','Comilla','','','78141.5','27-02-2017','07:02:36 PM');
+insert  into `delivery_details`(`session_id`,`name`,`email`,`street`,`phn_num`,`state`,`zip`,`company`,`all_total`,`date`,`time`) values ('de2ec785c7ff0a95beb5fe13c80ef153','Wasif Miraz','wasifmiraz@gmail.com','Airport Road','01798659331','Dhaka','1340','','6185','27-02-2017','09:02:42 PM');
+insert  into `delivery_details`(`session_id`,`name`,`email`,`street`,`phn_num`,`state`,`zip`,`company`,`all_total`,`date`,`time`) values ('1171bd055a9c27b46a445c0b20fcfafc','Wasif Miraz','wasifmiraz@gmail.com','Gulshan','017856521','Dhaka','2356','','9608','28-02-2017','09:02:01 PM');
+
+/*Table structure for table `dist_name` */
+
+DROP TABLE IF EXISTS `dist_name`;
+
+CREATE TABLE `dist_name` (
+  `district` varchar(40) character set utf8 collate utf8_unicode_ci default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `dist_name` */
+
+insert  into `dist_name`(`district`) values ('Dhaka');
+insert  into `dist_name`(`district`) values ('Comilla');
+insert  into `dist_name`(`district`) values ('Feni');
+insert  into `dist_name`(`district`) values ('Chittagong');
+insert  into `dist_name`(`district`) values ('Barisal');
+insert  into `dist_name`(`district`) values ('Sylhet');
+insert  into `dist_name`(`district`) values ('Khulna');
+insert  into `dist_name`(`district`) values ('Sherpur');
+
+/*Table structure for table `item_info` */
+
+DROP TABLE IF EXISTS `item_info`;
+
+CREATE TABLE `item_info` (
+  `item_id` varchar(40) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `item_name` varchar(40) character set utf8 collate utf8_unicode_ci NOT NULL,
+  PRIMARY KEY  (`item_id`,`item_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `item_info` */
+
+insert  into `item_info`(`item_id`,`item_name`) values ('ID--01','Mens');
+insert  into `item_info`(`item_id`,`item_name`) values ('ID--02','Home & Living');
+insert  into `item_info`(`item_id`,`item_name`) values ('ID--03','Ladies');
+insert  into `item_info`(`item_id`,`item_name`) values ('ID--04','Kids');
+insert  into `item_info`(`item_id`,`item_name`) values ('ID--05','Books & Audible');
+insert  into `item_info`(`item_id`,`item_name`) values ('ID--06','Movies & Games');
+insert  into `item_info`(`item_id`,`item_name`) values ('ID--07','Electronics & Computers');
+
+/*Table structure for table `payment_details` */
+
+DROP TABLE IF EXISTS `payment_details`;
+
+CREATE TABLE `payment_details` (
+  `email` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `card_name` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `number` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `cvv` varchar(4) character set utf8 collate utf8_unicode_ci default NULL,
+  `amount` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `date` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `time` varchar(40) character set utf8 collate utf8_unicode_ci default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `payment_details` */
+
+insert  into `payment_details`(`email`,`card_name`,`number`,`cvv`,`amount`,`date`,`time`) values ('araf@gmail.com','DBBL','01798665933',NULL,'78141.5','27-02-2017','05:54:23 PM');
+insert  into `payment_details`(`email`,`card_name`,`number`,`cvv`,`amount`,`date`,`time`) values ('araf@gmail.com','Visa Card','12548632552','1254','78141.5','27-02-2017','07:07:59 PM');
+insert  into `payment_details`(`email`,`card_name`,`number`,`cvv`,`amount`,`date`,`time`) values ('wasifmiraz@gmail.com','bKash','012459644552',NULL,'6185','27-02-2017','09:25:25 PM');
+insert  into `payment_details`(`email`,`card_name`,`number`,`cvv`,`amount`,`date`,`time`) values ('wasifmiraz@gmail.com','bKash','01798665933',NULL,'9608','28-02-2017','09:38:12 PM');
+
+/*Table structure for table `pending_pdt` */
+
+DROP TABLE IF EXISTS `pending_pdt`;
+
+CREATE TABLE `pending_pdt` (
+  `session_id` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `email` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `pdt_id` varchar(40) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `pdt_name` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `itm_name` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `cate_name` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `sub_cate` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `pdt_price` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  `quantity` varchar(40) character set utf8 collate utf8_unicode_ci default '1',
+  `total` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `date` varchar(20) character set utf8 collate utf8_unicode_ci default NULL,
+  `time` varchar(20) character set utf8 collate utf8_unicode_ci default NULL,
+  PRIMARY KEY  (`pdt_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `pending_pdt` */
+
+insert  into `pending_pdt`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`total`,`date`,`time`) values ('de2ec785c7ff0a95beb5fe13c80ef153','wasifmiraz@gmail.com','PDT--0000001','Fit Jean','Mens','Clothing','Pants','3200','1','3200','27-02-2017','09:02:54 PM');
+insert  into `pending_pdt`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`total`,`date`,`time`) values ('1171bd055a9c27b46a445c0b20fcfafc','wasifmiraz@gmail.com','PDT--0000002','Fite Jeans','Mens','Clothing','Pants','2200','1','2200','28-02-2017','09:02:55 PM');
+insert  into `pending_pdt`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`total`,`date`,`time`) values ('de2ec785c7ff0a95beb5fe13c80ef153','wasifmiraz@gmail.com','PDT--0000003','Mens Stylish Shirt','Mens','Clothing','Shirts','2500','1','2500','27-02-2017','09:02:21 PM');
+insert  into `pending_pdt`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`total`,`date`,`time`) values ('84d364838a5ee8a2f11fb6a93cb9d2cb','wasifmiraz@gmail.com','PDT--0000004','His Bloody Project','Books & Audible','Fiction & Literature','Drama','2100','1','2100','27-02-2017','09:02:06 PM');
+insert  into `pending_pdt`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`total`,`date`,`time`) values ('84d364838a5ee8a2f11fb6a93cb9d2cb','araf@gmail.com','PDT--0000005','The Cursed Child','Kids','Boys Shoes','Casual','1220','1','1220','27-02-2017','11:02:39 AM');
+insert  into `pending_pdt`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`total`,`date`,`time`) values ('84d364838a5ee8a2f11fb6a93cb9d2cb','araf@gmail.com','PDT--0000006','Marathon Running Shoes','Kids','Shoes','Hiking Shoes','1200','1','1200','26-02-2017','11:02:27 AM');
+insert  into `pending_pdt`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`total`,`date`,`time`) values ('84d364838a5ee8a2f11fb6a93cb9d2cb','araf@gmail.com','PDT--0000008','Reebok Leather Gum','Kids','Boys Shoes','Trainers','2150','1','2150','26-02-2017','11:02:08 AM');
+insert  into `pending_pdt`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`total`,`date`,`time`) values ('1171bd055a9c27b46a445c0b20fcfafc','wasifmiraz@gmail.com','PDT--0000009','Jared Futon','Home & Living','Bed Linen & Furnishing','Bedsheets','1500','1','1500','28-02-2017','09:02:06 PM');
+insert  into `pending_pdt`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`total`,`date`,`time`) values ('84d364838a5ee8a2f11fb6a93cb9d2cb','araf@gmail.com','PDT--0000010','Apple MacBook Air','Electronics & Computers','Computer & Technology','Laptops','65500','1','65500','26-02-2017','11:02:47 AM');
+insert  into `pending_pdt`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`total`,`date`,`time`) values ('84d364838a5ee8a2f11fb6a93cb9d2cb','araf@gmail.com','PDT--0000013','Call Of Duty','Movies & Games','Genre','Action & Adventure','3410','1','3410','26-02-2017','11:02:59 AM');
+insert  into `pending_pdt`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`quantity`,`total`,`date`,`time`) values ('84d364838a5ee8a2f11fb6a93cb9d2cb','araf@gmail.com','PDT--0000014','Floral Boho Dress','Ladies','Clothing','Shirts','1950','1','1950','26-02-2017','12:02:35 PM');
+
+/*Table structure for table `shopping_cart` */
+
+DROP TABLE IF EXISTS `shopping_cart`;
+
+CREATE TABLE `shopping_cart` (
+  `session_id` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `email` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `pdt_id` varchar(40) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `pdt_name` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `itm_name` char(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `cate_name` char(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `sub_cate` char(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `pdt_price` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  `discount` varchar(40) character set utf8 collate utf8_unicode_ci default '0',
+  `quantity` varchar(40) character set utf8 collate utf8_unicode_ci default '1',
+  `total` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `date` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `time` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  PRIMARY KEY  (`pdt_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `shopping_cart` */
+
+insert  into `shopping_cart`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`discount`,`quantity`,`total`,`date`,`time`) values ('1171bd055a9c27b46a445c0b20fcfafc','wasifmiraz@gmail.com','PDT--0000004','His Bloody Project','Books & Audible','Fiction & Literature','Drama','2100','0','1','2100','28-02-2017','09:02:07 PM');
+insert  into `shopping_cart`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`discount`,`quantity`,`total`,`date`,`time`) values ('1171bd055a9c27b46a445c0b20fcfafc','wasifmiraz@gmail.com','PDT--0000009','Jared Futon','Home & Living','Bed Linen & Furnishing','Bedsheets','1500','0','1','1500','28-02-2017','09:02:06 PM');
+insert  into `shopping_cart`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`discount`,`quantity`,`total`,`date`,`time`) values ('1171bd055a9c27b46a445c0b20fcfafc','wasifmiraz@gmail.com','PDT--0000013','Call Of Duty','Movies & Games','Genre','Action & Adventure','3410','0','1','3410','28-02-2017','09:02:30 PM');
+insert  into `shopping_cart`(`session_id`,`email`,`pdt_id`,`pdt_name`,`itm_name`,`cate_name`,`sub_cate`,`pdt_price`,`discount`,`quantity`,`total`,`date`,`time`) values ('1171bd055a9c27b46a445c0b20fcfafc','wasifmiraz@gmail.com','PDT--0000014','Floral Boho Dress','Ladies','Clothing','Shirts','1950','0','1','1950','28-02-2017','09:02:20 PM');
+
+/*Table structure for table `sub_cate` */
+
+DROP TABLE IF EXISTS `sub_cate`;
+
+CREATE TABLE `sub_cate` (
+  `item_name` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  `cate_name` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  `sub_id` varchar(30) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `sub_name` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  PRIMARY KEY  (`sub_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `sub_cate` */
+
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Clothing','Sub--001','T-Shirts');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Clothing','Sub--002','Shirts');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Clothing','Sub--003','Pants');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Clothing','Sub--004','Accessories');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Shoes','Sub--005','Trainers');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Shoes','Sub--006','Sandals');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Shoes','Sub--007','Casual');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Shoes','Sub--008','Hiking Shoes');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Accessories','Sub--009','Trainers');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Accessories','Sub--010','Sandals');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Accessories','Sub--011','Hiking Shoes');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Accessories','Sub--012','Casual');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Accessories','Sub--013','Trainers');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Featured','Sub--014','Trainers');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Featured','Sub--015','Sandals');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Looks And Trends','Sub--016','Trainers');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Looks And Trends','Sub--017','Sandals');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Mens','Looks And Trends','Sub--018','Watches');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Bed Linen & Furnishing','Sub--019','Bedsheets');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Bed Linen & Furnishing','Sub--020','Bedding Sets');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Bed Linen & Furnishing','Sub--021','Blanket Quits');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Bath','Sub--022','Bath Towels');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Bath','Sub--023','Hand & Face Towels');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Bath','Sub--024','Beach Towels');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Bath','Sub--025','Towels Set');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Bath','Sub--026','Bath Rugs');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Home Decor','Sub--027','Vases');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Home Decor','Sub--028','Homepieces');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Home Decor','Sub--029','Wall Decor');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Home Decor','Sub--030','Candals');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Home Decor','Sub--031','Candals Holder');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Home Decor','Sub--032','Wall Decals');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Kitchen & Table','Sub--033','Table Covers');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Kitchen & Table','Sub--034','Table Runners, Mats & Napkins');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Kitchen & Table','Sub--035','Kitchen');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Lamps & Light Fixtures','Sub--036','Ceiling Fans');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Lamps & Light Fixtures','Sub--037','Outdoor Lighting');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Home & Living','Lamps & Light Fixtures','Sub--038','Wall Lights');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Clothing','Sub--039','T-Shirts');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Clothing','Sub--040','Shirts');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Clothing','Sub--041','Jeans');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Clothing','Sub--042','Pants');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Shoes','Sub--043','Trainers');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Shoes','Sub--044','Sports');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Shoes','Sub--045','Sandals');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Shoes','Sub--046','Casual');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Shoes','Sub--047','Hiking Shoes');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Accessories','Sub--048','Sandals');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Accessories','Sub--049','Trainers');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Accessories','Sub--050','Watches');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Accessories','Sub--051','Heel');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Accessories','Sub--052','Casual');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Featured','Sub--053','Sandals');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Featured','Sub--054','Lipstick');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Featured','Sub--055','Watches');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Looks And Trends','Sub--056','Watches');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Looks And Trends','Sub--057','Trainers');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Looks And Trends','Sub--058','Sandals');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Ladies','Looks And Trends','Sub--059','Heels');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Boys Clothing','Sub--060','Jeans');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Boys Clothing','Sub--061','Shirts');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Boys Clothing','Sub--062','Clothing Sets');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Boys Clothing','Sub--063','Accessories');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Boys Shoes','Sub--064','Casual Shoes');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Boys Shoes','Sub--065','Sports Shoes');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Boys Shoes','Sub--066','Sandals & Flip Flops');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Boys Clothing','Sub--067','Casual');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Girls Clothing','Sub--068','Dresses');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Girls Clothing','Sub--069','Shirts');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Girls Clothing','Sub--070','Clothing Sets');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Girls Clothing','Sub--071','Track Pants');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Girls Clothing','Sub--072','Rompers & Sleepwear');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Girls Clothing','Sub--073','Indian Dress');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Girls Clothing','Sub--074','Jeans');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Girls Footwear','Sub--075','Flats & Casual Shoes');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Girls Footwear','Sub--076','Heels');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Girls Footwear','Sub--077','Sports Shoes');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Looks And Trends','Sub--078','Bags & Backpacks');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Looks & Trends','Sub--079','Jewellery & Hair Accessories');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Kids','Looks And Trends','Sub--080','Watches');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Fiction & Literature','Sub--081','Action & Adventure');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Fiction & Literature','Sub--082','Drama');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Fiction & Literature','Sub--083','Erotica');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Fiction & Literature','Sub--084','Horror');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Fiction & Literature','Sub--085','Historical Fiction');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Fiction & Literature','Sub--086','Poetry');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Arts & Entertainment','Sub--087','Architecture');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Arts & Entertainment','Sub--088','Art');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Arts & Entertainment','Sub--089','Games');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Arts & Entertainment','Sub--090','Design');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Arts & Entertainment','Sub--091','Music');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Arts & Entertainment','Sub--092','Photography');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Computer & Technology','Sub--093','Business Technology');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Computer & Technology','Sub--094','Computer Science');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Computer & Technology','Sub--095','Graphics Design');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Computer & Technology','Sub--096','History & Culture');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Computer & Technology','Sub--097','Networking & Cloud Computing');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Computer & Technology','Sub--098','Operating Systems');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Computer & Technology','Sub--099','Programming');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Computer & Technology','Sub--100','Security & Encryption');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Science','Sub--101','Astronomy');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Science','Sub--102','Chemistry');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Science','Sub--103','Technology & Engineering');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Mystery, Thriller & Suspense','Sub--104','Mystery');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Mystery, Thriller & Suspense','Sub--105','Thrillers & Suspense');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Mystery, Thriller & Suspense','Sub--106','Writing');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Medical Books & Textbooks','Sub--107','Administration & Medicine Econ');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Medical Books & Textbooks','Sub--108','Allied Health Professions');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Books & Audible','Medical Books & Textbooks','Sub--109','Dentistry');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Genre','Sub--110','Action & Adventure');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Genre','Sub--111','Comedy');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Genre','Sub--112','Drama');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Genre','Sub--113','Horror');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Genre','Sub--114','Foreign');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Genre','Sub--115','Kids & Family');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Genre','Sub--116','Romance');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Genre','Sub--117','Sports');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Genre','Sub--118','Special Interests');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Actor','Sub--119','John Lithgow');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Actor','Sub--120','Ben Affleck');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Actor','Sub--121','Tom Cruise');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Actor','Sub--122','Jeffrey Tambor');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Actor','Sub--123','Anna Kendrick');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Actor','Sub--124','Combie Smulders');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Director','Sub--125','Gavin O\'Connor');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Director','Sub--126','Edward Zwick');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Director','Sub--127','Sam Taylor-Johnson');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Director','Sub--128','Denis Villeneuve');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Director','Sub--129','Tate Taylor');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Movies & Games','Director','Sub--130','Mel Gibson');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Camera, Photo & Video','Sub--131','Lenses');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Camera, Photo & Video','Sub--132','Video');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Camera, Photo & Video','Sub--133','Underwater Photography');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Camera, Photo & Video','Sub--134','Projectors');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Camera, Photo & Video','Sub--135','Printers & Scanners');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Camera, Photo & Video','Sub--136','Tripods & Monopods');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Camera, Photo & Video','Sub--137','Video Survellance');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Computers & Accessories','Sub--138','Laptops');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Computers & Accessories','Sub--139','Desktops');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Computers & Accessories','Sub--140','Monitors');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Computers & Accessories','Sub--141','Tablets');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Computers & Accessories','Sub--142','Hard Drives & Storage');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Computers & Accessories','Sub--143','Accessories');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Computers & Accessories','Sub--144','Components');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Computers & Accessories','Sub--145','Networking');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Computers & Accessories','Sub--146','Gaming Accessories');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Software','Sub--147','Antivirus & Security');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Software','Sub--148','Design & Illustration');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Software','Sub--149','Lifestyle & Hobbies');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Software','Sub--150','Programming & Web Development');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Software','Sub--151','Tax Preparation');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Software','Sub--152','Utilities');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Software','Sub--153','Photography');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Software','Sub--154','Operating Systems');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Software','Sub--155','Networking & Servers');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Software','Sub--156','Gaming Software');
+insert  into `sub_cate`(`item_name`,`cate_name`,`sub_id`,`sub_name`) values ('Electronics & Computers','Software','Sub--157','Accounting & Finance');
+
+/*Table structure for table `upcoming_pdt` */
+
+DROP TABLE IF EXISTS `upcoming_pdt`;
+
+CREATE TABLE `upcoming_pdt` (
+  `itm_name` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `cate_name` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `sub_cate` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `pdt_id` varchar(40) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `pdt_name` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `pdt_price` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `pdt_size` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  `pdt_stock` varchar(4000) character set utf8 collate utf8_unicode_ci default NULL,
+  `pdt_details` mediumtext character set utf8 collate utf8_unicode_ci,
+  `date` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  `time` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  PRIMARY KEY  (`pdt_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `upcoming_pdt` */
+
+/*Table structure for table `user_auto_wallet` */
+
+DROP TABLE IF EXISTS `user_auto_wallet`;
+
+CREATE TABLE `user_auto_wallet` (
+  `email` varchar(50) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `name` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `amount` varchar(20) character set utf8 collate utf8_unicode_ci default '0',
+  `card_name` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `number` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `cvv` varchar(4) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `date` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  `time` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  PRIMARY KEY  (`email`,`cvv`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `user_auto_wallet` */
+
+insert  into `user_auto_wallet`(`email`,`name`,`amount`,`card_name`,`number`,`cvv`,`date`,`time`) values ('araf@gmail.com','Araf Hossain','1858',NULL,'','','13-02-2017','03:17:14 PM');
+insert  into `user_auto_wallet`(`email`,`name`,`amount`,`card_name`,`number`,`cvv`,`date`,`time`) values ('araf@gmalil.com','araf araf','0',NULL,'','','13-02-2017','03:15:33 PM');
+insert  into `user_auto_wallet`(`email`,`name`,`amount`,`card_name`,`number`,`cvv`,`date`,`time`) values ('s@as','s s','0',NULL,'','','17-02-2017','12:00:47 PM');
+insert  into `user_auto_wallet`(`email`,`name`,`amount`,`card_name`,`number`,`cvv`,`date`,`time`) values ('tut@gmail.com','TUT TUT','0',NULL,'','','27-02-2017','09:14:59 PM');
+insert  into `user_auto_wallet`(`email`,`name`,`amount`,`card_name`,`number`,`cvv`,`date`,`time`) values ('wasifmiraz@gmail.com','Wasif Miraz','4000','Bkash','012244593','','27-02-2017','09:13:43 PM');
+
+/*Table structure for table `user_signup` */
+
+DROP TABLE IF EXISTS `user_signup`;
+
+CREATE TABLE `user_signup` (
+  `name` varchar(60) character set utf8 collate utf8_unicode_ci default NULL,
+  `email` varchar(50) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `pass` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `phn_number` varchar(11) character set utf8 collate utf8_unicode_ci default NULL,
+  `company` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `state` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  `country` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  `street` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `updated` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `date` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  `time` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  PRIMARY KEY  (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `user_signup` */
+
+insert  into `user_signup`(`name`,`email`,`pass`,`phn_number`,`company`,`state`,`country`,`street`,`updated`,`date`,`time`) values ('Mohammad Araf Hossain','1araf1@gmail.com','araf','01751313650','Bangladesh Ltd.','Dhaka','','DEPZ Residential Area,Asulia, Savar, Dhaka','21-02-2017',NULL,NULL);
+insert  into `user_signup`(`name`,`email`,`pass`,`phn_number`,`company`,`state`,`country`,`street`,`updated`,`date`,`time`) values ('Araf Hossain','araf@gmail.com','araf','01751413650',NULL,'Comilla','Bangladesh','DEPZ Residential Area,Asulia, Savar, Dhaka','23-02-2017',NULL,NULL);
+insert  into `user_signup`(`name`,`email`,`pass`,`phn_number`,`company`,`state`,`country`,`street`,`updated`,`date`,`time`) values ('araf','araf@gmalil.com','araf','01751313651','We R 1 Ltd','Feni','Bangladesh','Gulshan','22-02-2017',NULL,NULL);
+insert  into `user_signup`(`name`,`email`,`pass`,`phn_number`,`company`,`state`,`country`,`street`,`updated`,`date`,`time`) values ('TUT TUT','tut@gmail.com','araf',NULL,NULL,NULL,NULL,NULL,NULL,'27-02-2017','09:14:59 PM');
+insert  into `user_signup`(`name`,`email`,`pass`,`phn_number`,`company`,`state`,`country`,`street`,`updated`,`date`,`time`) values ('Wasif Miraz','wasifmiraz@gmail.com','araf','01798665933','Google Bangladesh','Dhaka','Bangladesh','Airport Road','01-03-2017','27-02-2017','09:13:43 PM');
+
+/*Table structure for table `user_views` */
+
+DROP TABLE IF EXISTS `user_views`;
+
+CREATE TABLE `user_views` (
+  `session` varchar(30) character set utf8 collate utf8_unicode_ci NOT NULL default '',
+  `views` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  PRIMARY KEY  (`session`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `user_views` */
+
+insert  into `user_views`(`session`,`views`) values ('0','11');
+insert  into `user_views`(`session`,`views`) values ('1','12');
+insert  into `user_views`(`session`,`views`) values ('127.0.0.1','17');
+insert  into `user_views`(`session`,`views`) values ('127.0.0.2','18');
+insert  into `user_views`(`session`,`views`) values ('3rd','1');
+insert  into `user_views`(`session`,`views`) values ('4th','1');
+insert  into `user_views`(`session`,`views`) values ('5th','1');
+insert  into `user_views`(`session`,`views`) values ('62ae879c6aa67d3338d042ced6cd44','19');
+insert  into `user_views`(`session`,`views`) values ('6th','13');
+insert  into `user_views`(`session`,`views`) values ('7th','14');
+insert  into `user_views`(`session`,`views`) values ('8th','15');
+insert  into `user_views`(`session`,`views`) values ('araf','12');
+insert  into `user_views`(`session`,`views`) values ('c6f09a8fb7392c2af26cd558e554e2','16');
+insert  into `user_views`(`session`,`views`) values ('opss','1');
+
+/*Table structure for table `wallet_history` */
+
+DROP TABLE IF EXISTS `wallet_history`;
+
+CREATE TABLE `wallet_history` (
+  `email` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `name` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `amount` varchar(20) character set utf8 collate utf8_unicode_ci default NULL,
+  `card_name` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `number` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  `cvv` varchar(4) character set utf8 collate utf8_unicode_ci default NULL,
+  `date` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  `time` varchar(30) character set utf8 collate utf8_unicode_ci default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `wallet_history` */
+
+insert  into `wallet_history`(`email`,`name`,`amount`,`card_name`,`number`,`cvv`,`date`,`time`) values ('wasifmiraz@gmail.com','Wasif Miraz','600','Bkash','012244593',NULL,'01-03-2017','02:48:20 AM');
+
+/*Table structure for table `wishlist` */
+
+DROP TABLE IF EXISTS `wishlist`;
+
+CREATE TABLE `wishlist` (
+  `email` varchar(50) character set utf8 collate utf8_unicode_ci default NULL,
+  `pdt_id` varchar(50) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `date` varchar(30) character set utf8 collate utf8_unicode_ci default NULL,
+  `time` varchar(40) character set utf8 collate utf8_unicode_ci default NULL,
+  PRIMARY KEY  (`pdt_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `wishlist` */
+
+insert  into `wishlist`(`email`,`pdt_id`,`date`,`time`) values ('araf@gmail.com','PDT--0000003','22-02-2017','05:02:11 AM');
+insert  into `wishlist`(`email`,`pdt_id`,`date`,`time`) values ('araf@gmail.com','PDT--0000005','28-02-2017','09:02:14 PM');
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
